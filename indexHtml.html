@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c0d3 html</title>
+</head>
+    <body>
+        <!--creates an input box for text.-->
+        <h1>Welcome!</h1>
+        <h2>Js1</h2>
+        <h5>Challenge 1</h5>
+        <hr>
+        <h4>Enter your user name here</h4>
+        <input class = 'input1' type='text' placeholder='User name'>
+
+        <br>
+        <h4>Enter your password here</h4>
+        <input class ='input2' type='password' placeholder='Password'>
+
+        <button class='submit0'>Submit</button>
+        <!--<input class ='input3' type='file'>-->
+        <hr>
+        <h4>Enter you phone number here</h4>
+        <input class= 'phone-number' type='text' placeholder='555 555 555'>
+
+        <button class='submit1'>Submit</button>
+        <br>
+        <br>
+        <button class='click1'>Click For Messsage</button>
+        <hr>
+    </body>
+    <script>
+        //alert('Hello');//displays an alert box with text.
+        //alert('This is vanilla JavaScript');//displays an alert box with text.
+        
+        //selecting elements with a single class.
+        //returns the first matching element.
+        /*const inputEl0 = document.querySelector('.input1');//vaiable that contains a query selector.
+        const inputEl1 = document.querySelector('.input2');
+        const inputEl2 = document.querySelector('.input3');*/
+
+        const userPass0 = document.querySelector('.submit0');
+        userPass0.onclick = () =>{
+            alert('Thank you! User name and Password submitted.');
+        }
+
+        const phoneNum1 = document.querySelector('.submit1');//class
+        phoneNum1.onclick = () =>{
+            alert('Thank you! Phone number submitted.');
+        }
+
+        const messageClick1 = document.querySelector('.click1');//button class
+        messageClick1.onclick = () =>{
+            alert('Welcome to House Bevans!!');
+        }
+        //cpaturing the data user has entered in the input field
+    
+        const userInput = document.querySelector('.input1');
+
+        const passInput = document.querySelector('.input2');
+
+        const submitButton0 =  document.querySelector('.submit0');
+
+        submitButton0.onclick = () =>{//function/method that captures
+        //and displays input information.
+            alert(userInput.value);
+            alert(passInput.value);
+        }
+        
+
+        const phneInput = document.querySelector('.phone-number');
+
+        const submitButton1 = document.querySelector('.submit1');
+
+        submitButton1.onclick = () =>{//button actually collects user info.
+            const phneInputValue = +phneInput.value;//to make phone input to print out actual numbers.
+            alert(phneInputValue);
+        }
+        //selecting elements with multiple classes.
+        //returns matching elements.
+        /*const inputEl4 = document.querySelector('.input4');//vaiable that contains a query selector.
+        const inputEl5 = document.querySelector('.input');
+        const inputEl6 = document.querySelector('.phone-number');
+
+        const isOneTwo = inputEl4 === inputEl5;//connecting other variables to eachother.
+        const isOneThree = inputEl4 === inputEl6;
+        const isTwoThree = inputEl5 === inputEl6;*/
+        
+    </script>
+    <section>
+        <!--Excercise: Create a page that collects user information and prints it.-->
+        <input class = 'firstName' type="text" placeholder="first name">
+        <br>
+        <input class= 'lastName' type="text" placeholder = 'last name'>
+        <button class='submitNameData'>Submit</button>
+    </section>
+    <script>
+        const getFirstName = document.querySelector('.firstName');
+        const getLastName = document.querySelector('.lastName');
+        const nameButton = document.querySelector('.submitNameData');
+
+        nameButton.onclick = () =>{
+            alert(getFirstName.value);
+            alert(getLastName.value);
+        }
+    </script>
+</html>
